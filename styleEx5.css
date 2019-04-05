@@ -1,35 +1,31 @@
-nav span{
+a{
     padding: 5px;
     text-decoration: underline;
+    color: black;
 
 }
-span:hover, span a:hover{
+a:hover{
     color: white;
     background-color: grey;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius:5px;
     cursor: pointer;
 }
-nav span a{
-    color: black;
-}
-nav span a:active{ 
-    color: white; 
-} 
-article{
+article:nth-of-type(odd){
     background-color: #DCDCDC;
     padding: 1%;   
 }
-article p::first-letter{
+article > p::first-letter{
     text-transform: capitalize;
     font-size: 25px;
     font-weight: bold; 
 }
-#article2{
-    background-color: white;;
+article > p::first-line{
+    font-weight: bold; 
 }
 article:target{
     background-color: white;
-    border-style: solid;
-    border-color:black;
+    outline: 2px solid;
+    /*border-style: solid;
+    border-color:black; */
 }
