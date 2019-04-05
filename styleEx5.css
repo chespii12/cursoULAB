@@ -1,0 +1,35 @@
+nav span{
+    padding: 5px;
+    text-decoration: underline;
+
+}
+span:hover, span a:hover{
+    color: white;
+    background-color: grey;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius:5px;
+    cursor: pointer;
+}
+nav span a{
+    color: black;
+}
+nav span a:active{ 
+    color: white; 
+} 
+article{
+    background-color: #DCDCDC;
+    padding: 1%;   
+}
+article p::first-letter{
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: bold; 
+}
+#article2{
+    background-color: white;;
+}
+article:target{
+    background-color: white;
+    border-style: solid;
+    border-color:black;
+}
