@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Questrial"
+      rel="stylesheet"
+    />
     <title>User profile</title>
-</head>
-<body>
-    <img src="profile-180.jpg" alt="">
-    <p>Andrea</p>
-    <p>12 de Julio de 1994</p>
-    <p>España</p>
-    <p>4 posts publicados</p>
-</body>
+  </head>
+  <body>
+    <div class="userProfileContainer">
+      
+        <div class="wallpaperProfile">
+        </div>
+        <div class="imgContainer">
+            <svg
+              viewBox="0 0 100 100"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <pattern
+                  id="img"
+                  patternUnits="userSpaceOnUse"
+                  width="200"
+                  height="100"
+                >
+                  <image
+                    xlink:href="profile-180.jpg"
+                    x="-25"
+                    width="150"
+                    height="100"
+                  />
+                </pattern>
+              </defs>
+              <polygon
+                points="50 1 95 25 95 75 50 99 5 75 5 25"
+                fill="url(#img)"
+              />
+            </svg>
+          </div>
+        
+      <div>
+        <p>Andrea</p>
+      </div>
+      <div>
+        <p>12 de Julio de 1994</p>
+        <p>España</p>
+      </div>
+      <div class="publishedPosts">
+        <p>4 posts publicados</p>
+      </div>
+    </div>
+  </body>
 </html>

@@ -9,48 +9,96 @@ body {
 
 /*Mobile*/
 @media screen and (max-width: 767px) {
+  /* LOGIN */
   .login {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(168, 161, 161, 0.829);
+    /* background-color: rgba(168, 161, 161, 0.829); */
+    background-color: rgba(95, 158, 160, 0.7);
     margin-top: 50%;
     margin-bottom: 50%;
     padding: 10%;
   }
-  nav{
+  /* INDEX */
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: aquamarine;
+    background-color: rgb(95, 158, 160);
   }
-  .navL{
-      align-self: flex-start;
-      align-items: center;
-      justify-content: center;
-      display: flex;
+  .navL {
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
-  .navR{
-      padding: 2px;
+  .navR {
+    padding: 2px;
   }
-  .containerTitle{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }  
-  .posts{
-      display: flex;
-      flex-direction: column;
-  }
-  .post img{
-    width: 100%;
-  }
-  .post h2, h1{
+  h1 {
+    color: black;
     padding-left: 2%;
   }
-  .post p{
-      padding-left: 2%;
+  .containerTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: ghostwhite;
+  }
+  .posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .post img {
+    width: 100%;
+  }
+
+  .post h2 {
+    padding-left: 2%;
+  }
+  .post p {
+    padding-left: 2%;
+  }
+  .post > p {
+    justify-content: flex-end;
+  }
+  /* USER PROFILE */
+  .wallpaperProfile{
+    background-color: rgba(119, 119, 119, 0.8);
+    width: 100%;
+    height: 170px;
+    position: absolute;
+    top: 0;
+  }
+  .userProfileContainer {
+      background-color: rgba(95, 158, 160, 0.7);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  .imgContainer{
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 10%;
+    width: 100%;
+    
+  }
+  .publishedPosts{
+      background-color: rgba(0, 0, 0,0.8);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 10%;
+  }
+  svg{
+    width: 50%;
   }
 }
 /*Tablet*/
