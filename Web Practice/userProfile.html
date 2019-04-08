@@ -13,46 +13,114 @@
   </head>
   <body>
     <div class="userProfileContainer">
-      
-        <div class="wallpaperProfile">
-        </div>
-        <div class="imgContainer">
-            <svg
-              viewBox="0 0 100 100"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
+      <div class="imgContainer">
+        <svg
+          viewBox="0 0 100 100"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              id="img"
+              patternUnits="userSpaceOnUse"
+              width="200"
+              height="100"
             >
-              <defs>
-                <pattern
-                  id="img"
-                  patternUnits="userSpaceOnUse"
-                  width="200"
-                  height="100"
-                >
-                  <image
-                    xlink:href="profile-180.jpg"
-                    x="-25"
-                    width="150"
-                    height="100"
-                  />
-                </pattern>
-              </defs>
-              <polygon
-                points="50 1 95 25 95 75 50 99 5 75 5 25"
-                fill="url(#img)"
+              <image
+                xlink:href="profile-180.jpg"
+                x="-25"
+                width="150"
+                height="100"
               />
-            </svg>
-          </div>
-        
-      <div>
-        <p>Andrea</p>
+            </pattern>
+          </defs>
+          <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)" />
+        </svg>
       </div>
-      <div>
-        <p>12 de Julio de 1994</p>
-        <p>España</p>
+      <div class="wallpaperProfile">
+        <a href="index.html" id="return"
+          ><img src="arrow.png" alt="" width="40" height="40"
+        /></a>
+      </div>
+      <div class="nameUserProfile">
+        <p>Andrea Durá</p>
+      </div>
+      <div class="userInfo">
+        <span
+          ><img src="stork.png" alt="" width="25" height="25" />12th of July of
+          1994</span
+        >
+        <span><img src="world.png" alt="" width="25" height="25" /> Spain</span>
       </div>
       <div class="publishedPosts">
-        <p>4 posts publicados</p>
+        <p id="numPosts">4</p>
+        <p>Published posts</p>
+      </div>
+      <div class="containerPosts">
+        <article class="post">
+          <h2>Post 1</h2>
+          <img src="profile-800.jpg" alt="image post" />
+          <p>By Andrea</p>
+          <p>05th of Mach of 2019</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            tempor non neque vel tempus. Nunc eu nisi ac neque eleifend
+            venenatis. Duis est nisi, mollis sed elementum eget, facilisis ut
+            nulla. Morbi at augue aliquet est porta eleifend vel vel dolor.
+            Curabitur pharetra tellus ut mauris interdum tincidunt quis ut
+            risus. Nam ut mollis metus. Nulla eu interdum dolor, ut facilisis
+            orci. Phasellus rutrum, nisl ac faucibus suscipit, felis sem pretium
+            orci, ac tincidunt ipsum nunc a felis.
+          </p>
+        </article>
+        <article class="post">
+          <h2>Post 2</h2>
+          <img src="profile-800.jpg" alt="image post" />
+          <p>By Andrea</p>
+          <p>20th of March of 2019</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            tempor non neque vel tempus. Nunc eu nisi ac neque eleifend
+            venenatis. Duis est nisi, mollis sed elementum eget, facilisis ut
+            nulla. Morbi at augue aliquet est porta eleifend vel vel dolor.
+            Curabitur pharetra tellus ut mauris interdum tincidunt quis ut
+            risus. Nam ut mollis metus. Nulla eu interdum dolor, ut facilisis
+            orci. Phasellus rutrum, nisl ac faucibus suscipit, felis sem pretium
+            orci, ac tincidunt ipsum nunc a felis.
+          </p>
+        </article>
+        <article class="post">
+          <h2>Post 3</h2>
+          <img src="profile-800.jpg" alt="image post" />
+          <p>By Andrea</p>
+          <p>01th of April of 2019</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            tempor non neque vel tempus. Nunc eu nisi ac neque eleifend
+            venenatis. Duis est nisi, mollis sed elementum eget, facilisis ut
+            nulla. Morbi at augue aliquet est porta eleifend vel vel dolor.
+            Curabitur pharetra tellus ut mauris interdum tincidunt quis ut
+            risus. Nam ut mollis metus. Nulla eu interdum dolor, ut facilisis
+            orci. Phasellus rutrum, nisl ac faucibus suscipit, felis sem pretium
+            orci, ac tincidunt ipsum nunc a felis.
+          </p>
+        </article>
+        <article class="post">
+          <h2>Post 4</h2>
+          <img src="profile-800.jpg" alt="image post" />
+          <p>By Andrea</p>
+          <p>08th of April of 2019</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            tempor non neque vel tempus. Nunc eu nisi ac neque eleifend
+            venenatis. Duis est nisi, mollis sed elementum eget, facilisis ut
+            nulla. Morbi at augue aliquet est porta eleifend vel vel dolor.
+            Curabitur pharetra tellus ut mauris interdum tincidunt quis ut
+            risus. Nam ut mollis metus. Nulla eu interdum dolor, ut facilisis
+            orci. Phasellus rutrum, nisl ac faucibus suscipit, felis sem pretium
+            orci, ac tincidunt ipsum nunc a felis.
+          </p>
+        </article>
       </div>
     </div>
   </body>

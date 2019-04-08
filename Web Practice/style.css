@@ -6,104 +6,164 @@ body {
   padding: 0;
   font-family: "Questrial", sans-serif;
 }
+/* input{
+    float: right;
+}
+label{
+    padding: 2%;
+} */
 
 /*Mobile*/
-@media screen and (max-width: 767px) {
-  /* LOGIN */
-  .login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: rgba(168, 161, 161, 0.829); */
-    background-color: rgba(95, 158, 160, 0.7);
-    margin-top: 50%;
-    margin-bottom: 50%;
-    padding: 10%;
-  }
-  /* INDEX */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    background-color: rgb(95, 158, 160);
-  }
-  .navL {
-    align-self: flex-start;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
-  .navR {
-    padding: 2px;
-  }
-  h1 {
-    color: black;
-    padding-left: 2%;
-  }
-  .containerTitle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: ghostwhite;
-  }
-  .posts {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .post img {
-    width: 100%;
-  }
 
-  .post h2 {
-    padding-left: 2%;
-  }
-  .post p {
-    padding-left: 2%;
-  }
-  .post > p {
-    justify-content: flex-end;
-  }
-  /* USER PROFILE */
-  .wallpaperProfile{
-    background-color: rgba(119, 119, 119, 0.8);
-    width: 100%;
-    height: 170px;
-    position: absolute;
-    top: 0;
-  }
-  .userProfileContainer {
-      background-color: rgba(95, 158, 160, 0.7);
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-  }
-  .imgContainer{
-    z-index: 1;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    padding-top: 10%;
-    width: 100%;
-    
-  }
-  .publishedPosts{
-      background-color: rgba(0, 0, 0,0.8);
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      padding: 10%;
-  }
-  svg{
-    width: 50%;
-  }
+/* LOGIN */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content:  center;
+  /* background-color: rgba(168, 161, 161, 0.829); */
+  background-color: rgba(95, 158, 160, 0.7);
+  margin-top: 50%;
+  margin-bottom: 50%;
+  padding: 10%;
+}
+/* INDEX */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgb(95, 158, 160);
+}
+.navL {
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.navR {
+  padding: 2px;
+}
+h1 {
+  color: black;
+  padding-left: 2%;
+}
+.containerTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: ghostwhite;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.post img {
+  width: 100%;
+}
+
+.post h2 {
+  padding-left: 2%;
+}
+.post p {
+  padding-left: 2%;
+}
+.post > p {
+  justify-content: flex-end;
+}
+/* USER PROFILE */
+.wallpaperProfile {
+  background-image: url("background.png");
+  background-size: 600px;
+  opacity: 0.8;
+  border-bottom: solid black;
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  top: 0;
+}
+#return{
+    z-index: 100;
+  opacity: 1;
+}
+.userProfileContainer {
+  background-color: white;
+  width: 100%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imgContainer {
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 10%;
+  width: 100%;
+}
+svg {
+  width: 50%;
+}
+.nameUserProfile {
+  width: 100%;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+}
+.userInfo {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 20px;
+  padding: 4%;
+  padding-top: 10%;
+  padding-bottom: 20%;
+  box-sizing: border-box;
+}
+.publishedPosts {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  color: white;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+#numPosts {
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  color: dodgerblue;
+}
+/* NEW POST */
+.newPostContainer {
+  margin-top: 20%;
+  height: 350px;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.btnGroup{
+
 }
 /*Tablet*/
-@media screen and (min-width: 768px and max-width:1023px) {
-}
-/*Desktop*/
-@media screen and (min-width: 1024px) {
-}
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    .login {
+      margin-top: 25%;
+    }
+  }
+  /*Desktop*/
+  @media screen and (min-width: 1024px) {
+  }
+
+
