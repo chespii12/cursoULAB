@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // let  num1 = prompt("Introduce un número");
+        // let  num2 = prompt("Introduce otro número");
+        // num1=+num1;
+        // num2=+num2;
+        // let suma = num1+num2;
+        // let mayor;
+        // let menor;
+        // let par;
+        // let impar;
+        
+        // MIO
+        // if(num1 <= num2){
+        //     mayor = num2; 
+        //     menor=num1;            
+
+        //     }else {
+        //         mayor = num1;
+        //         menor= num2;
+        //     }
+        
+        // console.log("El número más grande es " + mayor);
+        // console.log("El número más pequeño es " + menor);
+
+        // var result = parImpar(num1);
+        // document.write(num1 + " es " + result);
+
+        // var result2 = parImpar(num2);
+        // document.write(num2 + " es " + result);
+        
+        // function parImpar(numero) {
+
+        //     if(num1 % 2 == 0) {
+        //         return "par";
+        //         }else {
+        //             return "impar";
+        //         }
+        // }
+        
+        // alert("La suma total es: "+ suma); //Prompt me crea strings
+
+        // SOLUCION
+        let  num1 = prompt("Introduce un número");
+        let  num2 = prompt("Introduce otro número");
+        num1=+num1;
+        num2=+num2;
+        let mayor;
+        let menor;
+        let pares=0;
+        let impares=0;
+        let suma=0;
+
+        if(num1 <= num2){
+            mayor = num2; 
+            menor=num1;            
+
+        }else {
+            mayor = num1;
+            menor= num2;
+        }
+        for (let indice = menor; indice <= mayor; indice++) {
+            console.log(indice);
+            if(indice%2 == 0)
+                pares++;
+            else
+                impares++;                    
+                           
+            suma=suma+indice;
+        }
+        console.log(suma);
+        document.write("Los pares son " + pares);  
+        document.write("Los impares son " + impares);
+        alert("La suma total es: "+ suma);
+    
+    </script>
+  </body>
+</html>

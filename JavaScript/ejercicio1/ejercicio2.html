@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let  num1 = prompt("Introduce un número");
+        let  num2 = prompt("Introduce otro número");
+        num1=+num1;
+        num2=+num2; 
+        let mayor;
+        let menor;
+
+        let numFilas = 0;
+        let tablaNum = 0;
+        if(num1>=1 && num2>=1 && num1<=10 && num2<=10){
+            if(num1 <= num2){
+                mayor = num2; 
+                menor=num1;            
+
+            }else {
+                mayor = num1;
+                menor= num2;
+            }
+            numFilas = mayor;
+            tablaNum = menor;
+
+            document.write("<table border=\"1\">");
+            for (let i = 1; i <= numFilas; i++) {
+                document.write("<tr>");
+                document.write("<td>"+ tablaNum + " x " + i + "</td>");
+                document.write("<td> = </td>");
+                document.write("<td>"+ tablaNum * i + "</td>");
+                document.write("</tr>");            
+            }
+            document.write("</table>");
+        }else{
+            alert("Valores introducidos no válidos. El nº debe estar entre 1 y 10");
+        }      
+    
+    </script>
+</body>
+</html>

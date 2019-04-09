@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        let  num = prompt("Introduce un número");
+        let a = new Array();
+
+        for (let index = 0; index < num; index++) {
+            a.push(index);
+            
+        }   
+        document.write(a);     
+        //añadir numero que me ha dado ultima posicion
+        a.push(num);
+        document.write("push");  
+        document.write(a);  
+        
+        //eliminar primera posición
+        a.shift();
+        document.write("shift");  
+        document.write(a);  
+        
+
+
+    </script>
+    
+</body>
+</html>
