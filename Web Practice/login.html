@@ -4,37 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css" /> 
     <title>Login</title>
   </head>
   <body>
     <div class="login">
-      <form action="index.html" method="">
-        <p>
-          <label for="username">USERNAME </label>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            maxlength="20"
-            required
-          />
-        </p>
-        <p>
-          <label for="userpwd">PASSWORD </label>
-          <input
-            type="password"
-            name="userpwd"
-            id="userpwd"
-            maxlength="20"
-            required
-          />
-        </p>
-        <p>
-          <input type="submit" value="OK" />
-        </p>
-      </form>
-    </div>
+        <form action="index.html">
+            <div class="form-group">
+              <label for="username">User</label>
+              <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter username"  maxlength="20" required >
+            </div>
+            <div class="form-group">
+              <label for="userpwd">Password</label>
+              <input type="password" class="form-control" id="" placeholder="Password" maxlength="20" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enter</button>
+          </form>
+      </div>
   </body>
 </html>
