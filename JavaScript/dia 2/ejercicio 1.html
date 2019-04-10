@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS EXAMPLE</title>
+</head>
+<body>
+    <div class="encabezado" id="encabezadoFactura">
+       <label class="nombre">Luis</label>
+       <label class="telefono">9656642158</label>
+       <label class="numeroFactura">1250</label>
+    </div>
+
+    <script>
+        let div = document.getElementById("encabezadoFactura");
+        div.setAttribute("class", "resalta");
+
+        let factura = div.getElementsByClassName("numeroFactura");
+        console.log(factura[0].textContent);
+        let  facturaNew = +factura[0].textContent + 1;
+        console.log(facturaNew);
+        factura[0].innerHTML = facturaNew;
+
+
+        // let titulo = document.querySelector("title");
+        // let enlaces = document.querySelectorAll("a[title$='world']");
+        // console.log(p);
+        // p.forEach(function(elem){
+        //     console.log(elem.title);
+        // });   
+           
+    </script>  
+</body>
+</html>
