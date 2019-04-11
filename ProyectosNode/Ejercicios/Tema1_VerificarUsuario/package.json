@@ -1,0 +1,14 @@
+{
+  "name": "tema1_verificarusuario",
+  "version": "1.0.0",
+  "description": "curso javascript",
+  "main": "principal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrea",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
