@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <body>
+    <div ng-app="myApp" ng-controller="namesCtrl">
+      <p>Pa&iacutes:</p>
+      <p><input type="text" ng-model="test" /></p>
+      <ul>
+        <li ng-repeat="x in namesCountries | filter:test">{{ x }}</li>
+      </ul>
+      
+      <p>Provincia:</p>
+      <p><input type="text" ng-model="test2" /></p>
+      <ul>
+        <li ng-repeat="x in namesProvince | filter:test2">{{ x }}</li>
+      </ul>
+
+    </div>
+    <script>
+      angular.module("myApp", []).controller("namesCtrl", function($scope) {
+        $scope.namesCountries = [
+          "Spain",
+          "Argentina",
+          "Alemania",
+          "Italia",
+          "Reino Unido",
+          "EEUU"
+        ];
+        $scope.namesProvince = [
+          "Alicante",
+          "Valencia",
+          "Barcelona",
+          "Madrid",
+          "Venecia",
+          "New York",
+          "Orlando",
+          "Leeds"
+        ];
+      });
+    </script>
+    <p>The list will only consists of names matching the filter.</p>
+  </body>
+</html>
