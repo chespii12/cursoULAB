@@ -1,0 +1,7 @@
+{
+  "name": "lugaress",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

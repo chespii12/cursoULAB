@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Places!</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="reorder=!reorder">
+        <ion-icon slot="icon-only" name="reorder"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>       
+</ion-header>
+<ion-content>
+  <ion-list #myList lines="full">
+    <ion-item color="light">
+      <ion-input placeholder="Enter description" [(ngModel)]="text"></ion-input>
+    </ion-item>
+    <ion-item color="light" *ngIf="text.length">
+      <input type="file" accept="image/*" (change)="add($event)" />
+      <ion-icon slot="end" name="camera" (click)="add()"></ion-icon>
+    </ion-item>    
+    <ion-reorder-group [disabled]="!reorder" (ionItemReorder)="move($event.detail)">
+      <ion-item-sliding *ngFor="let item of list; let i=index">
+        <ion-item [href]='item.url'>
+          <ion-thumbnail slot="start"><img [src]="item.img" /></ion-thumbnail>{{item.name}}
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+        <ion-item-options side="start">
+          <ion-item-option color="danger" (click)="delete(i)">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-reorder-group>
+  </ion-list>
+</ion-content>
