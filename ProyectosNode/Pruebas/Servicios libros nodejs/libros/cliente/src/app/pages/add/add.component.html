@@ -1,0 +1,9 @@
+<div class="container">
+  Id<input type="text" class="form-control" [(ngModel)]="book.id">  
+  Título<input type="text" class="form-control" [(ngModel)]="book.titulo">
+  Autor<input type="text" class="form-control" [(ngModel)]="book.autor">  
+  Precio<input type="text" class="form-control" [(ngModel)]="book.precio">
+  Imagen<input type="text" class="form-control" [(ngModel)]="book.img">
+  Detalles<input type="text" class="form-control mb-2" [(ngModel)]="book.url">         
+  <button (click)="add()" class="btn btn-block btn-primary">Guardar</button>
+</div> 

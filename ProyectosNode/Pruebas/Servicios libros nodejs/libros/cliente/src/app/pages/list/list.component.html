@@ -1,0 +1,12 @@
+<div class="container">
+  <input type="text" class="form-control mb-2" [(ngModel)]="search">
+  <div class="card-columns">
+    <a class="card bg-primary text-white text-center" *ngFor="let book of books.list | includes:search" [href]="book.url" target="_blank">
+      <img [src]="book.img" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{book.titulo}}</h5>
+        <p class="card-text">{{book.autor}} - {{book.precio}}€</p>
+      </div>
+    </a>
+  </div>
+</div>
