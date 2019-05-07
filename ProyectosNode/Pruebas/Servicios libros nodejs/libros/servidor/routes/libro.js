@@ -1,10 +1,11 @@
 const express = require('express');
+const conexion = require('./bdconfig.js');
 
 //let Libro = require('../models/libro.js');
 let router = express.Router();
 
 
-
+/*
 const fs = require('fs');
 
 const archivo = 'libros.json';
@@ -19,7 +20,7 @@ let cargarLibros = () => {
             reject([]);
         }
     });
-}
+}*/
 
 let guardarLibros = (libros) => {
     fs.writeFileSync(archivo, JSON.stringify(libros));
@@ -137,6 +138,17 @@ router.get('/:id', (req, res) => {
     });
 });
 
+router.get('/:id', (req, res) => {
+    buscarLibroPorId(req.params.id).then(resultado => {
+        if (resultado)
+            res.send({error: false, resultado: resultado});
+        else
+            res.send({error: true, mensajeError: "Libro no encontrado"});
+    }).catch(error => {
+        res.send({error: true, mensajeError:"Error buscando libro "+error});
+    });
+});
+
 router.post('/', (req, res) => {
     // Fernando: nuevos campos de 'img' y 'url'
     nuevoLibro(req.body.id, req.body.titulo,req.body.autor, req.body.precio, req.body.img, req.body.url).then(resultado => {
@@ -167,4 +179,37 @@ router.put('/', (req, res) => {
         res.send({error: true, mensajeError:"Error modificando libro"});
     });
 });
+
+module.exports = class Libro {
+    constructor(libroJSON) {
+    this.cod = libroJSON.cod;
+    this.isbn = libroJSON.isbn;
+    this.titulo = libroJSON.titulo;
+    this.precio = libroJSON.precio;
+    this.imagen = libroJSON.imagen;
+    this.url = libroJSON.url;
+    this.cod_Ac = libroJSON.cod_Ac;
+    }
+    static cargarLibros() {
+        return new Promise( (resolve, reject) => {
+            conexion.query("SELECT * FROM libros", (error, resultado, campos)=> {
+            if (error)
+                return reject(error);
+            else
+                resolve(resultado.map(cJSON => new Libro(cJSON)));
+            });
+        });
+    }
+    crearLibro() {
+        return new Promise( (resolve, reject) => {
+            let datos = {cod: this.cod, isbn: this.isbn, titulo: this.titulo, precio: this.precio, imagen: this.imagen, url:this.url, cod_Ac: this.cod_Ac};
+            conexion.query("INSERT INTO libros SET ?", datos, (error, resultado, campos) => {
+            if (error)
+                return reject(error);
+            else
+                resolve(resultado);
+            });
+        });
+    }
+}
 module.exports = router;
